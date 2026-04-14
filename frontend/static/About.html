@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Cars Dealership</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; }
+    .navbar { background: #1a1a2e; }
+    .navbar-brand, .nav-link { color: #fff !important; }
+    .hero { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 80px 0; }
+    .team-card { border: none; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    .team-card:hover { transform: translateY(-5px); }
+    .team-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 4px solid #e94560; }
+    .role-badge { background: #e94560; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">🚗 Cars Dealership</a>
+    <div class="navbar-nav ms-auto">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link active" href="/static/About.html">About Us</a>
+      <a class="nav-link" href="/static/Contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">About Cars Dealership</h1>
+    <p class="lead mt-3">America's most trusted national car retailer since 1995.</p>
+  </div>
+</section>
+
+<!-- Mission -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3">Our Mission</h2>
+        <p class="text-muted">At Cars Dealership, we believe everyone deserves a great car-buying experience. With over 200 dealership locations across the United States, we're committed to providing quality vehicles, transparent pricing, and outstanding customer service.</p>
+        <p class="text-muted">We stock thousands of new and pre-owned vehicles and have been helping Americans find their perfect car for over 25 years.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&q=80" alt="Dealership" class="img-fluid rounded-3 shadow"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Meet Our Team</h2>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card team-card p-4 text-center">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Aishwarya Tekade" class="team-img mx-auto mb-3"/>
+          <h5 class="fw-bold">Aishwarya Tekade</h5>
+          <span class="role-badge">Full Stack Developer</span>
+          <p class="text-muted mt-3 small">Leads front-end development using React and back-end APIs with Django and Flask. Passionate about building seamless user experiences.</p>
+          <p class="text-muted small">📧 aishwarya.tekade@carsdealership.com</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card team-card p-4 text-center">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Mitchell" class="team-img mx-auto mb-3"/>
+          <h5 class="fw-bold">James Mitchell</h5>
+          <span class="role-badge">Backend Engineer</span>
+          <p class="text-muted mt-3 small">Manages MongoDB microservices, Node.js APIs, and cloud deployments on IBM Cloud Code Engine. Expert in Docker and Kubernetes.</p>
+          <p class="text-muted small">📧 james.mitchell@carsdealership.com</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card team-card p-4 text-center">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Chen" class="team-img mx-auto mb-3"/>
+          <h5 class="fw-bold">Sarah Chen</h5>
+          <span class="role-badge">UI/UX Designer</span>
+          <p class="text-muted mt-3 small">Designs intuitive interfaces and ensures a responsive, accessible experience across all device sizes. Specializes in customer-first design thinking.</p>
+          <p class="text-muted small">📧 sarah.chen@carsdealership.com</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="py-5 bg-dark text-white text-center">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3"><h2 class="fw-bold text-danger">200+</h2><p>Dealership Locations</p></div>
+      <div class="col-md-3"><h2 class="fw-bold text-danger">50</h2><p>States Covered</p></div>
+      <div class="col-md-3"><h2 class="fw-bold text-danger">25K+</h2><p>Happy Customers</p></div>
+      <div class="col-md-3"><h2 class="fw-bold text-danger">25</h2><p>Years in Business</p></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

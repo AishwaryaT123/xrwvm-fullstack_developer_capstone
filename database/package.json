@@ -1,0 +1,15 @@
+{
+  "name": "dealership-database",
+  "version": "1.0.0",
+  "description": "MongoDB microservice for Cars Dealership",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.1"
+  }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Cars Dealership</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; }
+    .navbar { background: #1a1a2e; }
+    .navbar-brand, .nav-link { color: #fff !important; }
+    .nav-link.active { color: #e94560 !important; font-weight: bold; }
+    .hero { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 60px 0; }
+    .contact-card { border: none; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .icon-circle { width: 60px; height: 60px; background: #e94560; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; }
+    .btn-primary { background: #e94560; border: none; }
+    .btn-primary:hover { background: #c73652; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">🚗 Cars Dealership</a>
+    <div class="navbar-nav ms-auto">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/static/About.html">About Us</a>
+      <a class="nav-link active" href="/static/Contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Contact Us</h1>
+    <p class="lead mt-2">We'd love to hear from you. Reach out anytime!</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Contact Info -->
+      <div class="col-md-5">
+        <h3 class="fw-bold mb-4">Get In Touch</h3>
+
+        <div class="d-flex align-items-start mb-4">
+          <div class="icon-circle me-3 flex-shrink-0">📍</div>
+          <div>
+            <h6 class="fw-bold">Headquarters</h6>
+            <p class="text-muted mb-0">1234 Auto Drive, Detroit, MI 48201<br/>United States</p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-4">
+          <div class="icon-circle me-3 flex-shrink-0">📞</div>
+          <div>
+            <h6 class="fw-bold">Phone</h6>
+            <p class="text-muted mb-0">+1 (800) 555-CARS<br/>Mon–Fri, 9am–6pm EST</p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-4">
+          <div class="icon-circle me-3 flex-shrink-0">✉️</div>
+          <div>
+            <h6 class="fw-bold">Email</h6>
+            <p class="text-muted mb-0">support@carsdealership.com<br/>sales@carsdealership.com</p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-4">
+          <div class="icon-circle me-3 flex-shrink-0">🕐</div>
+          <div>
+            <h6 class="fw-bold">Business Hours</h6>
+            <p class="text-muted mb-0">Monday – Saturday: 9am – 8pm<br/>Sunday: 11am – 5pm</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-7">
+        <div class="card contact-card p-4">
+          <h4 class="fw-bold mb-4">Send Us a Message</h4>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" placeholder="John"/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" placeholder="Doe"/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" placeholder="john.doe@email.com"/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" placeholder="+1 (555) 000-0000"/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Nearest Dealership State</label>
+                <select class="form-select">
+                  <option value="">Select a state...</option>
+                  <option>Alabama</option><option>Alaska</option><option>Arizona</option>
+                  <option>California</option><option>Colorado</option><option>Florida</option>
+                  <option>Georgia</option><option>Illinois</option><option>Kansas</option>
+                  <option>Michigan</option><option>New York</option><option>Texas</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="4" placeholder="How can we help you?"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

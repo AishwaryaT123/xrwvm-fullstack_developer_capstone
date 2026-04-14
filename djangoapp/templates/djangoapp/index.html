@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cars Dealership</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; }
+    .navbar { background: #1a1a2e; }
+    .navbar-brand, .nav-link { color: #fff !important; }
+    .hero { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 60px 0; }
+    .dealer-card { border: none; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.2s; }
+    .dealer-card:hover { transform: translateY(-4px); }
+    .btn-danger { background: #e94560; border: none; }
+    .state-filter { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">🚗 Cars Dealership</a>
+    <div class="navbar-nav ms-auto d-flex align-items-center gap-2">
+      <a class="nav-link" href="/static/About.html">About</a>
+      <a class="nav-link" href="/static/Contact.html">Contact</a>
+      {% if user.is_authenticated %}
+        <span class="text-white me-2">👤 {{ user.username }}</span>
+        <a href="/djangoapp/logout" class="btn btn-outline-light btn-sm">Logout</a>
+      {% else %}
+        <a href="/djangoapp/login" class="btn btn-outline-light btn-sm me-1">Login</a>
+        <a href="/djangoapp/register" class="btn btn-danger btn-sm">Register</a>
+      {% endif %}
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Find Your Perfect Car</h1>
+    <p class="lead mt-2">Browse dealerships across the United States</p>
+  </div>
+</section>
+
+<!-- Filter by State -->
+<div class="container mt-4">
+  <div class="state-filter mb-4">
+    <h5 class="fw-bold mb-3">Filter by State</h5>
+    <div class="d-flex flex-wrap gap-2">
+      <a href="/djangoapp/" class="btn btn-outline-secondary btn-sm">All States</a>
+      <a href="/djangoapp/dealer/state/Kansas/" class="btn btn-outline-secondary btn-sm">Kansas</a>
+      <a href="/djangoapp/dealer/state/California/" class="btn btn-outline-secondary btn-sm">California</a>
+      <a href="/djangoapp/dealer/state/Florida/" class="btn btn-outline-secondary btn-sm">Florida</a>
+      <a href="/djangoapp/dealer/state/New York/" class="btn btn-outline-secondary btn-sm">New York</a>
+      <a href="/djangoapp/dealer/state/Texas/" class="btn btn-outline-secondary btn-sm">Texas</a>
+    </div>
+  </div>
+
+  <!-- Dealer List -->
+  <h4 class="fw-bold mb-3">Available Dealerships</h4>
+  <div class="row g-3">
+    {% for dealer in dealer_list %}
+    <div class="col-md-4">
+      <div class="card dealer-card p-3">
+        <h5 class="fw-bold">{{ dealer.full_name }}</h5>
+        <p class="text-muted mb-1">📍 {{ dealer.city }}, {{ dealer.st }}</p>
+        <p class="text-muted small mb-2">{{ dealer.address }}, {{ dealer.zip }}</p>
+        <a href="/djangoapp/dealer/{{ dealer.id }}/" class="btn btn-danger btn-sm">
+          {% if user.is_authenticated %}Review Dealer{% else %}View Reviews{% endif %}
+        </a>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+      <div class="alert alert-info">No dealerships found. Make sure the database microservice is running.</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
