@@ -49,8 +49,7 @@ capstone_dealership/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/AishwaryaT123/agfzb-fullStack-Cloud-Devlopment.git
-cd agfzb-fullStack-Cloud-Devlopment
+git clone [https://github.com/AishwaryaT123/capstone_dealership.git]
 ```
 
 ### 2. Backend (Django)
