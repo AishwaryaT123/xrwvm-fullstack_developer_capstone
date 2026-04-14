@@ -1,4 +1,6 @@
-# Capstone-Dealership Project
+# Capstone_Dealership Project
+
+Repository Name - capstone_dealership
 
 A full-stack web application for **Capstone-Dealership**, a national car retailer in the U.S. Built as part of the IBM Full-Stack Cloud Development Capstone.
 
