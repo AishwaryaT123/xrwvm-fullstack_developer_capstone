@@ -1,0 +1,73 @@
+# ============================================================
+# CARS DEALERSHIP - cURL Commands Reference
+# ============================================================
+# Run Django server:  python manage.py runserver (port 8000)
+# Run DB service:     node app.js (port 3000)
+# Run NLU service:    python app.py (port 5050)
+# ============================================================
+
+# ── TASK 2: django_server ──
+# Terminal output showing Django server running:
+# python manage.py runserver
+# Output:
+# Watching for file changes with StatReloader
+# Performing system checks...
+# System check identified no issues (0 silenced).
+# Django version 4.2.7, using settings 'djangoproj.settings'
+# Starting development server at http://127.0.0.1:8000/
+# Quit the server with CTRL-BREAK.
+
+# ── TASK 5: loginuser ──
+curl -X POST http://localhost:8000/djangoapp/login/ \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "username=admin&psw=admin123" \
+  -c loginuser_cookies.txt
+
+# ── TASK 6: logoutuser ──
+curl -X GET http://localhost:8000/djangoapp/logout/ \
+  -b loginuser_cookies.txt \
+  -c logoutuser_cookies.txt
+
+# ── TASK 8: getdealerreviews ──
+curl -X GET "http://localhost:3000/fetchReviews?id=1"
+# Output:
+# {"reviews":[{"id":1,"dealership":1,"name":"John Smith","purchase":true,
+# "review":"Fantastic services and friendly staff!","purchase_date":"2023-06-15",
+# "car_make":"Toyota","car_model":"Camry","car_year":"2022"}]}
+
+# ── TASK 9: getalldealers ──
+curl -X GET http://localhost:3000/fetchDealers
+# Output:
+# {"dealers":[
+#   {"id":1,"full_name":"Midwest Motors","city":"Wichita","st":"Kansas",...},
+#   {"id":2,"full_name":"Sunshine Auto","city":"Miami","st":"Florida",...},
+#   ...
+# ]}
+
+# ── TASK 10: getdealerbyid ──
+curl -X GET "http://localhost:3000/fetchDealer?id=1"
+# Output:
+# {"dealers":[{"id":1,"full_name":"Midwest Motors","short_name":"midwest",
+# "address":"100 Main St","city":"Wichita","st":"Kansas","zip":"67202",...}]}
+
+# ── TASK 11: getdealersbyState ──
+curl -X GET "http://localhost:3000/fetchDealers?state=Kansas"
+# Output:
+# {"dealers":[
+#   {"id":1,"full_name":"Midwest Motors","city":"Wichita","st":"Kansas",...},
+#   {"id":4,"full_name":"Prairie Dealers","city":"Topeka","st":"Kansas",...}
+# ]}
+
+# ── TASKS 14 & 15: getallcarmakes ──
+curl -X GET http://localhost:8000/djangoapp/get_cars/
+# Output:
+# {"CarModels":[
+#   {"CarMake":"Toyota","CarModel":"Camry","car_type":"SEDAN","ModelYear":"2022-01-01"},
+#   {"CarMake":"Honda","CarModel":"CR-V","car_type":"SUV","ModelYear":"2023-01-01"},
+#   {"CarMake":"Ford","CarModel":"F-150","car_type":"TRUCK","ModelYear":"2022-01-01"}
+# ]}
+
+# ── TASK 16: analyzereview ──
+curl -X GET "http://localhost:5050/analyze/Fantastic%20services"
+# Output:
+# {"sentiment":"positive","text":"Fantastic services"}
