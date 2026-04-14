@@ -1,6 +1,6 @@
-# 🚗 Cars Dealership - Full Stack Capstone Project
+# Capstone-Dealership Project
 
-A full-stack web application for **Cars Dealership**, a national car retailer in the U.S. Built as part of the IBM Full-Stack Cloud Development Capstone.
+A full-stack web application for **Capstone-Dealership**, a national car retailer in the U.S. Built as part of the IBM Full-Stack Cloud Development Capstone.
 
 ## Project Overview
 
@@ -26,7 +26,7 @@ This application allows users to:
 ## Project Structure
 
 ```
-agfzb-fullStack-Cloud-Devlopment/
+capstone_dealership/
 ├── server/
 │   ├── djangoapp/           # Django app (models, views, urls)
 │   ├── djangoproj/          # Django project settings
