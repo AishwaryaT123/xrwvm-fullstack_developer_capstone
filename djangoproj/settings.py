@@ -83,3 +83,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 LOGIN_URL = '/djangoapp/login/'
 LOGIN_REDIRECT_URL = '/'
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://capstone-dealership-ujjo.onrender.com"
+]
