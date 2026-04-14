@@ -4,16 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us - Cars Dealership</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <style>
     body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; }
     .navbar { background: #1a1a2e; }
     .navbar-brand, .nav-link { color: #fff !important; }
     .hero { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 80px 0; }
-    .team-card { border: none; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.2s; }
-    .team-card:hover { transform: translateY(-5px); }
-    .team-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 4px solid #e94560; }
     .role-badge { background: #e94560; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; }
+    .team-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+.team-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e94560;
+}
   </style>
 </head>
 <body>
@@ -55,38 +71,48 @@
 </section>
 
 <!-- Team -->
+<!-- Team -->
 <section class="py-5 bg-white">
   <div class="container">
     <h2 class="fw-bold text-center mb-5">Meet Our Team</h2>
     <div class="row g-4">
 
+      <!-- Member 1 -->
       <div class="col-md-4">
         <div class="card team-card p-4 text-center">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Aishwarya Tekade" class="team-img mx-auto mb-3"/>
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" alt="Aishwarya Tekade" class="team-img mx-auto mb-3"/>
           <h5 class="fw-bold">Aishwarya Tekade</h5>
           <span class="role-badge">Full Stack Developer</span>
-          <p class="text-muted mt-3 small">Leads front-end development using React and back-end APIs with Django and Flask. Passionate about building seamless user experiences.</p>
+          <p class="text-muted mt-3 small">
+            Specializes in building scalable web applications using React, Django, and Flask. Focused on delivering smooth user experiences and efficient backend systems.
+          </p>
           <p class="text-muted small">📧 aishwarya.tekade@carsdealership.com</p>
         </div>
       </div>
 
+      <!-- Member 2 -->
       <div class="col-md-4">
         <div class="card team-card p-4 text-center">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Mitchell" class="team-img mx-auto mb-3"/>
-          <h5 class="fw-bold">James Mitchell</h5>
+          <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=200&q=80" alt="Daniel Carter" class="team-img mx-auto mb-3"/>
+          <h5 class="fw-bold">Daniel Carter</h5>
           <span class="role-badge">Backend Engineer</span>
-          <p class="text-muted mt-3 small">Manages MongoDB microservices, Node.js APIs, and cloud deployments on IBM Cloud Code Engine. Expert in Docker and Kubernetes.</p>
-          <p class="text-muted small">📧 james.mitchell@carsdealership.com</p>
+          <p class="text-muted mt-3 small">
+            Expert in Node.js, MongoDB, and microservices architecture. Handles cloud deployments, APIs, and system scalability across distributed platforms.
+          </p>
+          <p class="text-muted small">📧 daniel.carter@carsdealership.com</p>
         </div>
       </div>
 
+      <!-- Member 3 -->
       <div class="col-md-4">
         <div class="card team-card p-4 text-center">
-          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Chen" class="team-img mx-auto mb-3"/>
-          <h5 class="fw-bold">Sarah Chen</h5>
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80" alt="Emily Rodriguez" class="team-img mx-auto mb-3"/>
+          <h5 class="fw-bold">Emily Rodriguez</h5>
           <span class="role-badge">UI/UX Designer</span>
-          <p class="text-muted mt-3 small">Designs intuitive interfaces and ensures a responsive, accessible experience across all device sizes. Specializes in customer-first design thinking.</p>
-          <p class="text-muted small">📧 sarah.chen@carsdealership.com</p>
+          <p class="text-muted mt-3 small">
+            Designs modern, user-friendly interfaces with a strong focus on accessibility and responsive design. Ensures a seamless experience across all devices.
+          </p>
+          <p class="text-muted small">📧 emily.rodriguez@carsdealership.com</p>
         </div>
       </div>
 
