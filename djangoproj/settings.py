@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-capstone-cars-dealership-secret-key-2024'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1', "capstone-dealership-ujjo.onrender.com"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
