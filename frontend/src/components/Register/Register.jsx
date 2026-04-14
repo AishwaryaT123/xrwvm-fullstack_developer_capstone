@@ -45,7 +45,7 @@ function Register() {
         </div>
 
         <form onSubmit={handleRegister} style={styles.form}>
-          {/* Username */}
+          {/* 1. Username Field */}
           <div style={styles.field}>
             <label style={styles.label}>Username</label>
             <input
@@ -58,7 +58,7 @@ function Register() {
             />
           </div>
 
-          {/* First Name */}
+          {/* 2. First Name Field */}
           <div style={styles.field}>
             <label style={styles.label}>First Name</label>
             <input
@@ -71,7 +71,7 @@ function Register() {
             />
           </div>
 
-          {/* Last Name */}
+          {/* 3. Last Name Field */}
           <div style={styles.field}>
             <label style={styles.label}>Last Name</label>
             <input
@@ -84,7 +84,7 @@ function Register() {
             />
           </div>
 
-          {/* Email */}
+          {/* 4. Email Field */}
           <div style={styles.field}>
             <label style={styles.label}>Email</label>
             <input
@@ -97,7 +97,7 @@ function Register() {
             />
           </div>
 
-          {/* Password */}
+          {/* 5. Password Field */}
           <div style={styles.field}>
             <label style={styles.label}>Password</label>
             <input
@@ -114,6 +114,7 @@ function Register() {
             <p style={styles.message}>{message}</p>
           )}
 
+          {/* Registered Button */}
           <button type="submit" style={styles.button}>
             Register
           </button>
